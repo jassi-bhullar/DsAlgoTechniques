@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+bool IsEven(int x)
+{
+	return (x & 1) == 0;
+}
+
 int main()
 {
 
@@ -11,10 +17,16 @@ int main()
 
 	// START
 	
-	int x = 34;
-	int y = 33;
+	int x = 11231278;
 
-	cout << y - x << endl;
+	if(IsEven(x))
+	{
+		cout << "Even\n";
+	}
+	else
+	{
+		cout << "Odd\n";
+	}
 
 	// END
 
