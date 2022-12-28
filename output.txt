@@ -1,1 +1,1 @@
-Even
+The element with single occurrence is 7
