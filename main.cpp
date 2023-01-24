@@ -2,31 +2,15 @@
 using namespace std;
 
 
-int getNumber(int arr[], int n)
+void mainFunc()
 {
-	int x, sum;
-	int result = 0;
+	unsigned int x = 2;
 
-	int bit_size = 32;
-	for (int i = 0; i < bit_size; ++i)
-	{
-		sum = 0;
-		x = (1 << i);
-		for (int j = 0; j < n; ++j)
-		{
-			if(arr[j] & x)
-			{
-				sum++;
-			}
-		}
+	bitset<8> xBit(x);
 
-		if((sum % 3) != 0)
-		{
-			result |= x;
-		}
-	}
+	xBit = xBit << 2;
 
-	return result;
+	cout << xBit << endl;
 }
 
 int main()
@@ -39,9 +23,7 @@ int main()
 
 	// START
 	
-	int arr[] = { 12, 1, 12, 3, 12, 1, 1, 2, 3, 2, 2, 3, 7 };
-	int n = sizeof(arr) / sizeof(arr[0]);
-	cout << "The element with single occurrence is " << getNumber(arr, n);
+	mainFunc();
 	
 
 	// END
